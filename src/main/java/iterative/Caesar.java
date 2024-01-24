@@ -1,7 +1,9 @@
 package iterative;
 
-public class Caesar {
-    public static String encrypt(String input, int key) {
+import engine.CaesarEngine;
+
+public class Caesar implements CaesarEngine {
+    public String encrypt(String input, int key) {
         StringBuilder result = new StringBuilder();
 
         for (int index = 0; index < input.length(); index++) {
@@ -25,7 +27,7 @@ public class Caesar {
         return result.toString();
     }
 
-    public static String decrypt(String input, int key) {
-        return Caesar.encrypt(input, 26 - key);
+    public String decrypt(String input, int key) {
+        return encrypt(input, 26 - key);
     }
 }

@@ -1,10 +1,12 @@
 package functional;
 
+import engine.CaesarEngine;
+
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Caesar {
-    public static String encrypt(String input, int key) {
+public class Caesar implements CaesarEngine {
+    public String encrypt(String input, int key) {
         int validKey = key % 26;
 
         return IntStream.range(0, input.length())
@@ -18,7 +20,7 @@ public class Caesar {
                 .collect(Collectors.joining());
     }
 
-    public static String decrypt(String input, int key) {
-        return Caesar.encrypt(input, 26 - key);
+    public String decrypt(String input, int key) {
+        return encrypt(input, 26 - key);
     }
 }

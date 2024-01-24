@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Init commit" />
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Init commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706083079412</updated>
-      <workItem from="1706083080712" duration="11171000" />
+      <workItem from="1706083080712" duration="11949000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -168,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706094321903</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Init commit">
+      <created>1706094404123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706094404124</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
