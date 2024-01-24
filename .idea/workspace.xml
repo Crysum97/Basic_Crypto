@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Init commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2bOPJDhz9jnj3tEZ9hkjxe4S92U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.VigereneTest">
+    <configuration name="Vigerene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="iterative.Vigerene" />
+      <module name="Basic_Crypto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterative.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatrixTest.testCaesar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Basic_Crypto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterative.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="iterative" />
+      <option name="MAIN_CLASS_NAME" value="iterative.MatrixTest" />
+      <option name="METHOD_NAME" value="testCaesar(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatrixTest.testMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Basic_Crypto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterative.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="iterative" />
+      <option name="MAIN_CLASS_NAME" value="iterative.MatrixTest" />
+      <option name="METHOD_NAME" value="testMatrix(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VigereneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Basic_Crypto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterative.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="iterative" />
+      <option name="MAIN_CLASS_NAME" value="iterative.VigereneTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VigereneTest.testVigerene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Basic_Crypto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iterative.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="iterative" />
+      <option name="MAIN_CLASS_NAME" value="iterative.VigereneTest" />
+      <option name="METHOD_NAME" value="testVigerene(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.VigereneTest" />
+        <item itemvalue="JUnit.VigereneTest.testVigerene" />
+        <item itemvalue="Application.Vigerene" />
+        <item itemvalue="JUnit.MatrixTest.testMatrix" />
+        <item itemvalue="JUnit.MatrixTest.testCaesar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="" />
+      <created>1706083079412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706083079412</updated>
+      <workItem from="1706083080712" duration="10434000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init commit">
+      <created>1706092552368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706092552368</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
+  </component>
+</project>
