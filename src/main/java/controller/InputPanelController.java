@@ -2,19 +2,23 @@ package controller;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.io.File;
+import java.io.*;
 import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import view.InputPanel;
 
 /**
  * This class handles the input panel logic
  */
 public class InputPanelController {
-    /** currently selected file. empty string if no file is selected */
-    private static String selectedFilePath = "";
     /** log4j instance */
     private static final Logger logger = LogManager.getLogger("InputPanelController");
+    private final InputPanel view;
+
+    public InputPanelController(InputPanel view) {
+        this.view = view;
+    }
 
     /**
      * Opens a dialog for the user to select a text file
@@ -38,20 +42,32 @@ public class InputPanelController {
         return Optional.ofNullable(chooser.getSelectedFile());
     }
 
-    /**
-     * defines the logic that should be executed when the open button is clicked
-     */
-    public static void onOpenButtonClicked() {
-        Optional<File> fileMaybe = openFile();
-        selectedFilePath = fileMaybe.map(File::getAbsolutePath).orElse("");
-        logger.info(String.format("Selected file: %s", selectedFilePath.isEmpty() ? "NONE" : selectedFilePath));
+    private String readFromFile(File source) {
+        try {
+            logger.info("Started reading file content");
+            StringBuilder content = new StringBuilder();
+            BufferedReader reader = new BufferedReader(new FileReader(source));
+            reader.lines().forEach(line -> content.append(line).append('\n'));
+            reader.close();
+            logger.info("Finished reading file content");
+            return content.toString();
+        } catch (IOException ignore) {
+            logger.error("An IOException occured while reading the file content");
+            return "";
+        }
     }
 
     /**
-     * simple getter for the absolute file path of the selected file
-     * @return absolute path of the selected file
+     * defines the logic that should be executed when the open button is clicked
      */
-    public static String getSelectedFilePath() {
-        return selectedFilePath;
+    public void onOpenButtonClicked() {
+        Optional<File> fileMaybe = openFile();
+        fileMaybe.ifPresent(file -> {
+                    view.getPathTextField().setText(file.getAbsolutePath());
+                    view.getContentContainer().setText(readFromFile(file));
+                });
+        logger.info(String.format("Selected file: %s", view.getPathTextField().getText().isEmpty()
+                                                                ? "NONE"
+                                                                : view.getPathTextField().getText()));
     }
 }

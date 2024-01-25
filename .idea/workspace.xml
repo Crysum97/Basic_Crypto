@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Moved InputPanel to a separate class">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Adjusted InputPanelController and added ShutdownHook">
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/ShutdownHook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +147,7 @@
       <updated>1706083079412</updated>
       <workItem from="1706083080712" duration="12146000" />
       <workItem from="1706105457433" duration="1158000" />
-      <workItem from="1706106840232" duration="10129000" />
+      <workItem from="1706106840232" duration="13105000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -202,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706183117499</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added logs to View">
+      <created>1706183473481</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706183473481</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +236,8 @@
     <MESSAGE value="Added log4j, comments and a GUI" />
     <MESSAGE value="Updated Strings.properties" />
     <MESSAGE value="Moved InputPanel to a separate class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved InputPanel to a separate class" />
+    <MESSAGE value="Added logs to View" />
+    <MESSAGE value="Adjusted InputPanelController and added ShutdownHook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted InputPanelController and added ShutdownHook" />
   </component>
 </project>
