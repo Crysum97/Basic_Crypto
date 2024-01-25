@@ -1,11 +1,27 @@
 package iterative;
 
+import engine.CryptoEngine;
+import jdk.jshell.spi.ExecutionControl.NotImplementedException;
+import util.CryptoException;
+
 import java.util.Random;
+
 
 /**
  * iterative implementation of the matrix encryption
  */
-public class Matrix {
+public class Matrix implements CryptoEngine {
+
+
+    @Override
+    public String encrypt(String input, int key) throws CryptoException {
+        throw new CryptoException("");
+    }
+
+    @Override
+    public String encrypt(String input, String key) throws CryptoException {
+        throw new CryptoException("");
+    }
 
     /**
      * encrypts a given text using matrix encryption.
@@ -14,7 +30,7 @@ public class Matrix {
      * @param input text to encrypt
      * @return encypted text
      */
-    public static String encrypt(String input) {
+    public String encrypt(String input) {
         // next integer that is greater that the square root of the input length
         int dimension = (int) Math.ceil(Math.sqrt(input.length()));
         // construct array
@@ -51,6 +67,16 @@ public class Matrix {
         return result.toString();
     }
 
+    @Override
+    public String decrypt(String input, int key) throws CryptoException {
+        throw new CryptoException("");
+    }
+
+    @Override
+    public String decrypt(String input, String key) throws CryptoException {
+        throw new CryptoException("");
+    }
+
     /**
      * decrypts a text using matrix encryption.
      * decrypted text might contain additional tailing characters if they were added during
@@ -58,8 +84,8 @@ public class Matrix {
      * @param input text to decrypt
      * @return decrypted text
      */
-    public static String decrypt(String input) {
+    public String decrypt(String input) {
         // decryption is the same as encryption
-        return Matrix.encrypt(input);
+        return encrypt(input);
     }
 }

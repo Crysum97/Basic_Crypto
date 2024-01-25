@@ -1,6 +1,7 @@
 package functional;
 
-import engine.CaesarEngine;
+import engine.CryptoEngine;
+import util.CryptoException;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -8,7 +9,7 @@ import java.util.stream.IntStream;
 /**
  * functional implementation of the caesar cipher
  */
-public class Caesar implements CaesarEngine {
+public class Caesar implements CryptoEngine {
 
     /**
      * encrypts a text using an integer value as a key
@@ -31,6 +32,16 @@ public class Caesar implements CaesarEngine {
                 .collect(Collectors.joining());
     }
 
+    @Override
+    public String encrypt(String input, String key) throws CryptoException {
+        throw new CryptoException("");
+    }
+
+    @Override
+    public String encrypt(String input) throws CryptoException {
+        throw new CryptoException("");
+    }
+
     /**
      * decrypts a text using an integer value as a key
      * @param input text to decrypt
@@ -39,5 +50,15 @@ public class Caesar implements CaesarEngine {
      */
     public String decrypt(String input, int key) {
         return encrypt(input, 26 - key);
+    }
+
+    @Override
+    public String decrypt(String input, String key) throws CryptoException {
+        throw new CryptoException("");
+    }
+
+    @Override
+    public String decrypt(String input) throws CryptoException {
+        throw new CryptoException("");
     }
 }
