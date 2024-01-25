@@ -10,11 +10,24 @@ import java.util.Arrays;
  */
 public class Vigerene implements CryptoEngine {
 
+    /**
+     * not supported
+     * @param input text to encrypt
+     * @param key key to use
+     * @return encrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String encrypt(String input, int key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * encrypts a given text using a given text key
+     * @param input text to encrypt
+     * @param key text key to use
+     * @return encrypted text
+     */
     @Override
     public String encrypt(String input, String key) {
         // construct char table
@@ -35,19 +48,33 @@ public class Vigerene implements CryptoEngine {
     }
 
     /**
-     * encrypts a given text using vigerene encryption
+     * not supported
      * @param input text to encrypt
      * @return encrypted text
+     * @throws CryptoException always
      */
     public String encrypt(String input) throws CryptoException{
         throw new CryptoException();
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @param key key to use
+     * @return decrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input, int key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * decrypts a given text using a given text key
+     * @param input text to decrypt
+     * @param key text key to use
+     * @return decrypted text
+     */
     @Override
     public String decrypt(String input, String key) {
         // construct char table
@@ -74,6 +101,12 @@ public class Vigerene implements CryptoEngine {
         return result.toString();
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @return decryted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input) throws CryptoException {
         throw new CryptoException();

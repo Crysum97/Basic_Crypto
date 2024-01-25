@@ -1,7 +1,6 @@
 package iterative;
 
 import engine.CryptoEngine;
-import jdk.jshell.spi.ExecutionControl.NotImplementedException;
 import util.CryptoException;
 
 import java.util.Random;
@@ -13,11 +12,25 @@ import java.util.Random;
 public class Matrix implements CryptoEngine {
 
 
+    /**
+     * not supported
+     * @param input text to encrypt
+     * @param key key to use
+     * @return encrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String encrypt(String input, int key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * not supported
+     * @param input text to encrypt
+     * @param key text key to use
+     * @return encrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String encrypt(String input, String key) throws CryptoException {
         throw new CryptoException();
@@ -67,11 +80,25 @@ public class Matrix implements CryptoEngine {
         return result.toString();
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @param key key to use
+     * @return decrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input, int key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @param key text key to use
+     * @return decrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input, String key) throws CryptoException {
         throw new CryptoException();

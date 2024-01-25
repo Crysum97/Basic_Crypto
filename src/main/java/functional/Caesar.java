@@ -2,7 +2,6 @@ package functional;
 
 import engine.CryptoEngine;
 import util.CryptoException;
-
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -32,11 +31,24 @@ public class Caesar implements CryptoEngine {
                 .collect(Collectors.joining());
     }
 
+    /**
+     * not supported
+     * @param input text to encrypt
+     * @param key text key to use
+     * @return encrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String encrypt(String input, String key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * not supported
+     * @param input text to encrypt
+     * @return encrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String encrypt(String input) throws CryptoException {
         throw new CryptoException();
@@ -52,11 +64,24 @@ public class Caesar implements CryptoEngine {
         return encrypt(input, 26 - key);
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @param key key to use
+     * @return decrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input, String key) throws CryptoException {
         throw new CryptoException();
     }
 
+    /**
+     * not supported
+     * @param input text to decrypt
+     * @return decrypted text
+     * @throws CryptoException always
+     */
     @Override
     public String decrypt(String input) throws CryptoException {
         throw new CryptoException();
