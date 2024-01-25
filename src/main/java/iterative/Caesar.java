@@ -43,12 +43,12 @@ public class Caesar implements CryptoEngine {
 
     @Override
     public String encrypt(String input, String key) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     @Override
     public String encrypt(String input) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     /**
@@ -63,11 +63,11 @@ public class Caesar implements CryptoEngine {
 
     @Override
     public String decrypt(String input, String key) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     @Override
     public String decrypt(String input) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 }

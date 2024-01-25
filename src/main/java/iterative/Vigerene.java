@@ -12,7 +12,7 @@ public class Vigerene implements CryptoEngine {
 
     @Override
     public String encrypt(String input, int key) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     @Override
@@ -40,12 +40,12 @@ public class Vigerene implements CryptoEngine {
      * @return encrypted text
      */
     public String encrypt(String input) throws CryptoException{
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     @Override
     public String decrypt(String input, int key) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Vigerene implements CryptoEngine {
 
     @Override
     public String decrypt(String input) throws CryptoException {
-        throw new CryptoException("");
+        throw new CryptoException();
     }
 
 

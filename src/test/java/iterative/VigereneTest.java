@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 public class VigereneTest {
     @ParameterizedTest
-    @CsvSource({"HALLO", "WELT", "TEST", "SUPER"})
-    public void testVigerene(String input) {
+    @CsvSource({"HALLO, MAUS", "WELT, HALLO", "TEST, TEST", "SUPER, AUTO"})
+    public void testVigerene(String input, String key) {
         System.out.printf("Input: %s\n", input);
         CryptoEngine engine = new Vigerene();
         try {
-            assertEquals(input, engine.decrypt(engine.encrypt(input, "TEST"), "TEST"));
+            assertEquals(input, engine.decrypt(engine.encrypt(input, key), key));
         } catch (NotImplementedException e) {
             fail();
         }

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Adjusted InputPanelController and added ShutdownHook">
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/CryptoException.java" afterDir="false" />
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Extended Crypto implementations to fit one interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/CryptoEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/iterative/MatrixTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/iterative/MatrixTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/CryptoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/CryptoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/iterative/VigereneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/iterative/VigereneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +148,7 @@
       <updated>1706083079412</updated>
       <workItem from="1706083080712" duration="12146000" />
       <workItem from="1706105457433" duration="1158000" />
-      <workItem from="1706106840232" duration="19604000" />
+      <workItem from="1706106840232" duration="20090000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -224,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706186468370</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Extended Crypto implementations to fit one interface">
+      <created>1706193221494</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706193221494</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +253,7 @@
     <MESSAGE value="Moved InputPanel to a separate class" />
     <MESSAGE value="Added logs to View" />
     <MESSAGE value="Adjusted InputPanelController and added ShutdownHook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted InputPanelController and added ShutdownHook" />
+    <MESSAGE value="Extended Crypto implementations to fit one interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extended Crypto implementations to fit one interface" />
   </component>
 </project>
