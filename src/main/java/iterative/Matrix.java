@@ -2,8 +2,18 @@ package iterative;
 
 import java.util.Random;
 
+/**
+ * iterative implementation of the matrix encryption
+ */
 public class Matrix {
 
+    /**
+     * encrypts a given text using matrix encryption.
+     * size of the matrix is determined automatically.
+     * empty cells will be filled using capital letters
+     * @param input text to encrypt
+     * @return encypted text
+     */
     public static String encrypt(String input) {
         // next integer that is greater that the square root of the input length
         int dimension = (int) Math.ceil(Math.sqrt(input.length()));
@@ -41,6 +51,13 @@ public class Matrix {
         return result.toString();
     }
 
+    /**
+     * decrypts a text using matrix encryption.
+     * decrypted text might contain additional tailing characters if they were added during
+     * encryption or the string does not completely fill the matrix
+     * @param input text to decrypt
+     * @return decrypted text
+     */
     public static String decrypt(String input) {
         // decryption is the same as encryption
         return Matrix.encrypt(input);

@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Init commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" afterDir="false" />
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Added log4j, comments and a GUI">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/View.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Strings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic_Crypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Basic_Crypto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/functional/CaesarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/iterative/CaesarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -45,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -57,7 +70,14 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VigereneTest">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="Basic_Crypto" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Vigerene" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="iterative.Vigerene" />
       <module name="Basic_Crypto" />
@@ -71,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixTest.testCaesar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CaesarTest.testCaesar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Basic_Crypto" />
       <extension name="coverage">
         <pattern>
@@ -80,24 +100,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="iterative" />
-      <option name="MAIN_CLASS_NAME" value="iterative.MatrixTest" />
-      <option name="METHOD_NAME" value="testCaesar(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatrixTest.testMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Basic_Crypto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="iterative.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="iterative" />
-      <option name="MAIN_CLASS_NAME" value="iterative.MatrixTest" />
-      <option name="METHOD_NAME" value="testMatrix(java.lang.String)" />
+      <option name="MAIN_CLASS_NAME" value="iterative.CaesarTest" />
+      <option name="METHOD_NAME" value="testCaesar(java.lang.String,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.CaesarTest.testCaesar" />
         <item itemvalue="JUnit.VigereneTest" />
         <item itemvalue="JUnit.VigereneTest.testVigerene" />
         <item itemvalue="Application.Vigerene" />
-        <item itemvalue="JUnit.MatrixTest.testMatrix" />
-        <item itemvalue="JUnit.MatrixTest.testCaesar" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +156,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706083079412</updated>
-      <workItem from="1706083080712" duration="11949000" />
+      <workItem from="1706083080712" duration="12146000" />
+      <workItem from="1706105457433" duration="1158000" />
+      <workItem from="1706106840232" duration="8729000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -182,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706094404124</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added interface for different implementations of caesar cipher">
+      <created>1706095229543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706095229543</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,9 +211,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
+    <MESSAGE value="Added interface for different implementations of caesar cipher" />
+    <MESSAGE value="Added log4j, comments and a GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added log4j, comments and a GUI" />
   </component>
 </project>

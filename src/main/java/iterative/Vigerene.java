@@ -2,8 +2,16 @@ package iterative;
 
 import java.util.Arrays;
 
+/**
+ * iterative implementation of the vigerene encryption
+ */
 public class Vigerene {
 
+    /**
+     * encrypts a given text using vigerene encryption
+     * @param input text to encrypt
+     * @return encrypted text
+     */
     public static String encrypt(String input) {
         // construct char table
         char[][] array = generate_table();
@@ -20,6 +28,12 @@ public class Vigerene {
         return result.toString();
     }
 
+    /**
+     * decrypts a given text using vigerene encryption
+     * @param input text to decrypt
+     * @param reversedOriginal reversed original text to use as a key
+     * @return decrypted text
+     */
     public static String decrpyt(String input, String reversedOriginal) {
         // construct char table
         char[][] array = generate_table();
@@ -38,11 +52,16 @@ public class Vigerene {
         return result.toString();
     }
 
+    /**
+     * Constructs the character table used for encryption and decryption
+     * @return vigerene character table
+     */
     private static char[][] generate_table() {
         char[][] array = new char[26][26];
 
         for (int x = 0; x < 26; x++) {
             for (int y = 0; y < 26; y++) {
+                // determine which character is written to the table
                 int ascii = ((x + y) % 26) + 65;
                 array[x][y] = (char)ascii;
             }
@@ -55,10 +74,5 @@ public class Vigerene {
         }*/
 
         return array;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(encrypt("HALLO"));
-        System.out.println(decrpyt("VLWLV", "OLLAH"));
     }
 }
