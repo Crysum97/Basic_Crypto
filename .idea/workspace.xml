@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Added log4j, comments and a GUI">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_22_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/View.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/View.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/Strings.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic_Crypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Basic_Crypto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/CaesarEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +142,7 @@
       <updated>1706083079412</updated>
       <workItem from="1706083080712" duration="12146000" />
       <workItem from="1706105457433" duration="1158000" />
-      <workItem from="1706106840232" duration="8729000" />
+      <workItem from="1706106840232" duration="9077000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -195,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706095229543</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added log4j, comments and a GUI">
+      <created>1706182272590</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706182272590</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
