@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="optical improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/EncryptPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/FileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/View.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Strings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Strings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +148,7 @@
       <workItem from="1706105457433" duration="1158000" />
       <workItem from="1706106840232" duration="20906000" />
       <workItem from="1706194706832" duration="3477000" />
-      <workItem from="1706349184132" duration="578000" />
+      <workItem from="1706349184132" duration="1828000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -246,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706194431241</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="optical improvements">
+      <created>1706349784589</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706349784589</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
