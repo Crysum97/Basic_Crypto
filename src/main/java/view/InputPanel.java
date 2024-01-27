@@ -6,24 +6,25 @@ import javax.swing.*;
 
 public class InputPanel {
     /** reference to the open button */
-    private JButton openBtn;
+    private JButton open;
     /** reference to the path text field */
     private JTextField pathTextField;
     /** reference to the root panel */
     private JPanel root;
     /** reference to the text area which yields the file content */
     private JTextArea fileContent;
+    private JButton nextButton;
     /** reference to this classes controller */
     private final InputPanelController controller;
-
     /**
      * default constructor
      */
-    public InputPanel() {
+    public InputPanel(ApplicationFrame parent) {
         this.controller = new InputPanelController(this);
 
         // register listener for the open button
-        this.openBtn.addActionListener(event -> controller.onOpenButtonClicked());
+        this.open.addActionListener(event -> controller.onOpenButtonClicked());
+        this.nextButton.addActionListener(e -> controller.onNext(parent));
     }
 
     /**

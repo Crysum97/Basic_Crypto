@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="Added exception message to CryptoException">
+    <list default="true" id="a090a800-200f-4c61-aeec-819527fbf752" name="Changes" comment="optical improvements">
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/EncryptPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/functional/Caesar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Caesar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iterative/Vigerene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/InputPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ApplicationFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/InputPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/View.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Strings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Strings.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +63,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Vigerene">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Application" />
       <module name="Basic_Crypto" />
@@ -128,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Vigerene" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Vigerene" />
         <item itemvalue="JUnit.CaesarTest.testCaesar" />
         <item itemvalue="JUnit.VigereneTest" />
         <item itemvalue="JUnit.VigereneTest.testVigerene" />
@@ -146,7 +151,9 @@
       <updated>1706083079412</updated>
       <workItem from="1706083080712" duration="12146000" />
       <workItem from="1706105457433" duration="1158000" />
-      <workItem from="1706106840232" duration="20840000" />
+      <workItem from="1706106840232" duration="20906000" />
+      <workItem from="1706194706832" duration="3477000" />
+      <workItem from="1706349184132" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1706092552368</created>
@@ -232,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706193679935</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cleanup and Comments">
+      <created>1706194431241</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706194431241</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +274,8 @@
     <MESSAGE value="Adjusted InputPanelController and added ShutdownHook" />
     <MESSAGE value="Extended Crypto implementations to fit one interface" />
     <MESSAGE value="Added exception message to CryptoException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added exception message to CryptoException" />
+    <MESSAGE value="Cleanup and Comments" />
+    <MESSAGE value="optical improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="optical improvements" />
   </component>
 </project>

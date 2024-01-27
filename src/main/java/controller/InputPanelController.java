@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import view.ApplicationFrame;
 import view.InputPanel;
 
 /**
@@ -69,5 +70,9 @@ public class InputPanelController {
         logger.info(String.format("Selected file: %s", view.getPathTextField().getText().isEmpty()
                                                                 ? "NONE"
                                                                 : view.getPathTextField().getText()));
+    }
+
+    public void onNext(ApplicationFrame parent) {
+        parent.callEncryptionPanel();
     }
 }
