@@ -19,16 +19,27 @@ public class Caesar implements CryptoEngine {
     public String encrypt(String input, int key) {
         // reduce the key to match alphabet range
         int validKey = key % 26;
+        String cleaned = cleanString(input);
 
-        return IntStream.range(0, input.length())
+        return IntStream.range(0, cleaned.length())
                 // add key
-                .mapToObj(index -> (char) (input.charAt(index) + validKey))
+                .mapToObj(index -> (char) (cleaned.charAt(index) + validKey))
                 // translate back into bounds if necessary
                 .map(sign -> (char) (((sign - 65) % 26) + 65))
+                .map(this::checkBound)
                 // map to String
-                .map(sign -> Character.toString(sign))
+                .map(Character::toString)
                 // build result
                 .collect(Collectors.joining());
+    }
+
+    /**
+     * recursivly determines the lowest value that is within the bounds of capital letters
+     * @param ascii input value
+     * @return lowest ascii value that is within the bounds [65, 90]
+     */
+    private int checkBound(int ascii) {
+        return ascii >= 65 ? ascii : checkBound(ascii + 26);
     }
 
     /**
@@ -61,7 +72,7 @@ public class Caesar implements CryptoEngine {
      * @return decrypted text
      */
     public String decrypt(String input, int key) {
-        return encrypt(input, 26 - key);
+        return encrypt(cleanString(input), 26 - key);
     }
 
     /**

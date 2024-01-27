@@ -32,14 +32,16 @@ public class Vigerene implements CryptoEngine {
     public String encrypt(String input, String key) {
         // construct char table
         char[][] array = generate_table();
+        String cleaned = cleanString(input);
+        String cleanedKey = cleanString(key);
 
         // prepare result
         StringBuilder result = new StringBuilder();
         int keyIndex = 0;
         // iterate through string
-        for (int index = 0; index < input.length(); index++) {
+        for (int index = 0; index < cleaned.length(); index++) {
             // lookup resulting character
-            result.append(array[input.charAt(index) - 65][key.charAt(keyIndex++) - 65]);
+            result.append(array[cleaned.charAt(index) - 65][cleanedKey.charAt(keyIndex++) - 65]);
             if (keyIndex >= key.length()) {
                 keyIndex = 0;
             }
@@ -79,16 +81,18 @@ public class Vigerene implements CryptoEngine {
     public String decrypt(String input, String key) {
         // construct char table
         char[][] array = generate_table();
+        String cleaned = cleanString(input);
+        String cleanedKey = cleanString(key);
 
         // prepare result
         StringBuilder result = new StringBuilder();
         int keyIndex = 0;
         // iterate through string
-        for (int index = 0; index < input.length(); index++) {
-            int keyLetter = key.charAt(keyIndex) - 65;
+        for (int index = 0; index < cleaned.length(); index++) {
+            int keyLetter = cleanedKey.charAt(keyIndex) - 65;
             // lookup resulting character
             for (int i = 0; i < 26; i++) {
-                if (input.charAt(index) == array[keyLetter][i]) {
+                if (cleaned.charAt(index) == array[keyLetter][i]) {
                     result.append(array[0][i]);
                     keyIndex++;
                     if(keyIndex >= key.length()) {

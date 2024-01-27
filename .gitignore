@@ -27,3 +27,4 @@ replay_pid*
 /target/
 # IDE data sources
 /.idea/dataSources/
+/.idea/workspace.xml

@@ -45,7 +45,8 @@ public class Matrix implements CryptoEngine {
      */
     public String encrypt(String input) {
         // next integer that is greater that the square root of the input length
-        int dimension = (int) Math.ceil(Math.sqrt(input.length()));
+        String cleaned = cleanString(input);
+        int dimension = (int) Math.ceil(Math.sqrt(cleaned.length()));
         // construct array
         char[][] array = new char[dimension][dimension];
 
@@ -57,8 +58,8 @@ public class Matrix implements CryptoEngine {
         for (int x = 0; x < dimension; x++) {
             for (int y = 0; y < dimension; y++) {
                 // ... either write a letter from the string
-                if (index < input.length()) {
-                    array[x][y] = input.charAt(index++);
+                if (index < cleaned.length()) {
+                    array[x][y] = cleaned.charAt(index++);
                 // ... or write a random capital letter
                 } else {
                     Random random = new Random();

@@ -15,7 +15,7 @@ public class MatrixTest {
         System.out.printf("Input: %s\n", input);
         CryptoEngine engine = new Matrix();
         try {
-            assertTrue(engine.decrypt(engine.encrypt(input)).startsWith(input));
+            assertTrue(engine.decrypt(engine.encrypt(input)).startsWith(input.toUpperCase()));
         } catch (ExecutionControl.NotImplementedException e) {
             fail();
         }

@@ -18,10 +18,11 @@ public class Caesar implements CryptoEngine {
     public String encrypt(String input, int key) {
         // prepare result
         StringBuilder result = new StringBuilder();
+        String cleaned = cleanString(input);
 
-        for (int index = 0; index < input.length(); index++) {
+        for (int index = 0; index < cleaned.length(); index++) {
             // add key
-            int ascii = input.charAt(index) + key;
+            int ascii = cleaned.charAt(index) + key;
 
             // check upper bounds
             while (ascii > 90) {
