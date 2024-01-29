@@ -5,7 +5,9 @@ import util.CryptoException;
 import view.EncryptPanel;
 
 import java.io.File;
-import java.util.Locale;
+
+import static util.Tools.breakIntoLines;
+import static util.Tools.transformString;
 
 public class EncryptPanelController extends FileController {
     EncryptPanel view;
@@ -21,7 +23,7 @@ public class EncryptPanelController extends FileController {
     public void encryptCaesar(CryptoEngine engine,String input, int key) {
         try {
             String encrypted = engine.encrypt(input, key);
-            view.getPreviewTextArea().setText(encrypted);
+            view.getPreviewTextArea().setText(breakIntoLines(encrypted));
         } catch (CryptoException e) {
             e.printStackTrace();
         }
@@ -30,7 +32,7 @@ public class EncryptPanelController extends FileController {
     public void encryptMatrix(CryptoEngine engine, String input) {
         try {
             String encrypted = engine.encrypt(input);
-            view.getPreviewTextArea().setText(encrypted);
+            view.getPreviewTextArea().setText(breakIntoLines(encrypted));
         } catch (CryptoException e) {
             e.printStackTrace();
         }
@@ -38,10 +40,12 @@ public class EncryptPanelController extends FileController {
 
     public void encryptVigerene(CryptoEngine engine, String input, String key) {
         try {
-            String encrypted = engine.encrypt(input, readFromFile(new File(key)).toUpperCase().replaceAll("[^A-Z]", ""));
-            view.getPreviewTextArea().setText(encrypted);
+            String encrypted = engine.encrypt(input, transformString(readFromFile(new File(key))));
+            view.getPreviewTextArea().setText(breakIntoLines(encrypted));
         } catch (CryptoException e) {
             e.printStackTrace();
         }
     }
+
+
 }
