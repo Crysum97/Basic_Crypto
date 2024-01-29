@@ -27,8 +27,20 @@ public class EncryptPanel {
             String input = parent.input.getContentContainer().getText();
             String keyField = keyTextField.getText();
             switch (Objects.requireNonNull(methodComboBox.getSelectedItem()).toString()) {
-                case "Caesar 1" -> controller.encryptCaesar(new functional.Caesar(), input, Integer.parseInt(keyField));
-                case "Caesar 2" -> controller.encryptCaesar(new iterative.Caesar(), input, Integer.parseInt(keyField));
+                case "Caesar 1" -> {
+                    try {
+                        controller.encryptCaesar(new functional.Caesar(), input, Integer.parseInt(keyField));
+                    } catch (NumberFormatException ignore) {
+                        controller.handleInvalidInput(keyField);
+                    }
+                }
+                case "Caesar 2" -> {
+                    try {
+                        controller.encryptCaesar(new iterative.Caesar(), input, Integer.parseInt(keyField));
+                    } catch (NumberFormatException ignore) {
+                        controller.handleInvalidInput(keyField);
+                    }
+                }
                 case "Matrix" -> controller.encryptMatrix(new Matrix(), input);
                 case "Vigerene" -> controller.encryptVigerene(new Vigerene(), input, keyField);
                 default -> System.out.println("Shouldn't be here...");

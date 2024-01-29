@@ -1,15 +1,19 @@
 package controller;
 
 import engine.CryptoEngine;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import util.CryptoException;
 import view.EncryptPanel;
 
+import javax.swing.*;
 import java.io.File;
 
 import static util.Tools.breakIntoLines;
 import static util.Tools.transformString;
 
 public class EncryptPanelController extends FileController {
+    private static final Logger logger = LogManager.getLogger("EncryptPanel");
     EncryptPanel view;
 
     public EncryptPanelController(EncryptPanel view) {
@@ -45,6 +49,12 @@ public class EncryptPanelController extends FileController {
         } catch (CryptoException e) {
             e.printStackTrace();
         }
+    }
+
+    public void handleInvalidInput(String invalid) {
+        logger.warn(String.format("Found invalid input %s", invalid));
+        JOptionPane.showMessageDialog(null, "Please provide a valid encryption key!",
+                "Error", JOptionPane.ERROR_MESSAGE);
     }
 
 
