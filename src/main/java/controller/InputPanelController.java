@@ -30,8 +30,10 @@ public class InputPanelController extends FileController {
     public void onOpenButtonClicked() {
         Optional<File> fileMaybe = openFile();
         fileMaybe.ifPresent(file -> {
+                    String encrypted = breakIntoLines(transformString(readFromFile(file)));
                     view.getPathTextField().setText(file.getAbsolutePath());
-                    view.getContentContainer().setText(breakIntoLines(transformString(readFromFile(file))));
+                    view.getContentContainer().setText(encrypted);
+                    view.getNextButton().setEnabled(!encrypted.isEmpty());
                 });
         logger.info(String.format("Selected file: %s", view.getPathTextField().getText().isEmpty()
                                                                 ? "NONE"

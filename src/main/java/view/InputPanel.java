@@ -50,4 +50,8 @@ public class InputPanel {
     public JTextArea getContentContainer(){
         return this.fileContent;
     }
+
+    public JButton getNextButton() {
+        return this.nextButton;
+    }
 }
