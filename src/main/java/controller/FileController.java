@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.Optional;
 
 public class FileController {
+    /** Log4J instance */
     private static final Logger logger = LogManager.getLogger("FileController");
 
     /**
@@ -17,13 +18,7 @@ public class FileController {
      */
     protected Optional<File> openFile() {
         // construct FileChooser
-        JFileChooser chooser = new JFileChooser();
-        // disable multi-selection
-        chooser.setMultiSelectionEnabled(false);
-        // only allow text files to be selected
-        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("text file", "txt");
-        chooser.setFileFilter(filter);
+        JFileChooser chooser = getTextFileChooser();
         // show open dialog
         logger.info("Showing open dialog");
         chooser.showOpenDialog(null);
@@ -33,6 +28,11 @@ public class FileController {
         return Optional.ofNullable(chooser.getSelectedFile());
     }
 
+    /**
+     * Reads the content of a given file
+     * @param source {@link File} to read
+     * @return content of the file as {@link String}
+     */
     protected String readFromFile(File source) {
         try {
             logger.info("Started reading file content");
@@ -48,17 +48,18 @@ public class FileController {
         }
     }
 
+    /**
+     * Selects a text file to save to
+     * @return {@link Optional} of the selected {@link File}
+     */
     protected Optional<File> saveTextFile() {
-        JFileChooser chooser = new JFileChooser();
-        chooser.setMultiSelectionEnabled(false);
-        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("text file", "txt");
-        chooser.setFileFilter(filter);
+        JFileChooser chooser = getTextFileChooser();
 
         logger.info("Showing save dialog");
         chooser.showSaveDialog(null);
         logger.info("Save dialog closed");
 
+        // This check is necessary to ensure that the correct file extension is used!
         if (chooser.getSelectedFile() == null || chooser.getSelectedFile().getAbsolutePath().endsWith("txt")) {
             return Optional.ofNullable(chooser.getSelectedFile());
         } else {
@@ -66,6 +67,11 @@ public class FileController {
         }
     }
 
+    /**
+     * Overwrites the Content of the given {@link File} with the given {@link String}
+     * @param target {@link File} to save to
+     * @param content {@link String} to save to the file
+     */
     protected void writeToFile(File target, String content) {
         try {
             logger.info(String.format("Started writing to file at %s", target.getAbsolutePath()));
@@ -73,8 +79,22 @@ public class FileController {
             writer.write(content);
             writer.flush();
             writer.close();
+            logger.info(String.format("Done writing to file at %s", target.getAbsolutePath()));
         } catch (IOException ignore) {
             logger.error(String.format("Encountered a problem while writing to %s", target.getAbsolutePath()));
         }
+    }
+
+    /**
+     * Generates a {@link JFileChooser} that lets the user select a single text file
+     * @return {@link JFileChooser} that only accepts a single text files
+     */
+    private JFileChooser getTextFileChooser() {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setMultiSelectionEnabled(false);
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("text file", "txt");
+        chooser.setFileFilter(filter);
+        return chooser;
     }
 }
