@@ -16,6 +16,7 @@ public class EncryptPanel {
     private JButton encryptButton;
     private JButton nextButton;
     private JTextArea previewTextArea;
+    private JButton saveToFileButton;
     private final EncryptPanelController controller;
 
     public EncryptPanel(ApplicationFrame parent) {

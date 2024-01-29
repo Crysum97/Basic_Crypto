@@ -1,12 +1,9 @@
 package controller;
 
-import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import util.Tools;
 import view.ApplicationFrame;
 import view.InputPanel;
 
