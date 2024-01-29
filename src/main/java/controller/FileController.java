@@ -5,10 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Optional;
 
 public class FileController {
@@ -48,6 +45,36 @@ public class FileController {
         } catch (IOException ignore) {
             logger.error("An IOException occured while reading the file content");
             return "";
+        }
+    }
+
+    protected Optional<File> saveTextFile() {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setMultiSelectionEnabled(false);
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("text file", "txt");
+        chooser.setFileFilter(filter);
+
+        logger.info("Showing save dialog");
+        chooser.showSaveDialog(null);
+        logger.info("Save dialog closed");
+
+        if (chooser.getSelectedFile() == null || chooser.getSelectedFile().getAbsolutePath().endsWith("txt")) {
+            return Optional.ofNullable(chooser.getSelectedFile());
+        } else {
+            return Optional.of(new File(chooser.getSelectedFile().getAbsoluteFile() + ".txt"));
+        }
+    }
+
+    protected void writeToFile(File target, String content) {
+        try {
+            logger.info(String.format("Started writing to file at %s", target.getAbsolutePath()));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(target, false));
+            writer.write(content);
+            writer.flush();
+            writer.close();
+        } catch (IOException ignore) {
+            logger.error(String.format("Encountered a problem while writing to %s", target.getAbsolutePath()));
         }
     }
 }

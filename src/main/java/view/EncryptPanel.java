@@ -5,6 +5,8 @@ import iterative.Matrix;
 import iterative.Vigerene;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class EncryptPanel {
@@ -46,6 +48,7 @@ public class EncryptPanel {
                 default -> System.out.println("Shouldn't be here...");
             }
         });
+        saveToFileButton.addActionListener(e -> controller.onSaveFile());
     }
 
     public JPanel getRoot() {

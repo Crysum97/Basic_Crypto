@@ -52,9 +52,13 @@ public class EncryptPanelController extends FileController {
     }
 
     public void handleInvalidInput(String invalid) {
-        logger.warn(String.format("Found invalid input %s", invalid));
+        logger.error(String.format("Found invalid input %s", invalid));
         JOptionPane.showMessageDialog(null, "Please provide a valid encryption key!",
                 "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void onSaveFile() {
+        saveTextFile().ifPresent(file -> writeToFile(file, transformString(view.getPreviewTextArea().getText())));
     }
 
 
