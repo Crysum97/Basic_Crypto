@@ -11,6 +11,7 @@ public class ApplicationFrame extends JFrame {
     JPanel currentContent;
     private final InputPanel input = new InputPanel(this);
     private final EncryptPanel encrypt = new EncryptPanel(this);
+    private final InjectPanel inject = new InjectPanel(this);
     Stack<JPanel> visited = new Stack<>();
 
     /**
@@ -32,19 +33,28 @@ public class ApplicationFrame extends JFrame {
      */
     public void callEncryptionPanel() {
         visited.push(currentContent);
-        this.setContentPane(encrypt.getRoot());
-        this.revalidate();
-        this.repaint();
+        currentContent = encrypt.getRoot();
+        update();
+    }
+
+    public void callInjectPanel() {
+        visited.push(currentContent);
+        currentContent = inject.getRoot();
+        update();
     }
 
     public void popLastPanel() {
         currentContent = visited.pop();
-        this.setContentPane(currentContent);
-        this.revalidate();
-        this.repaint();
+        update();
     }
 
     public InputPanel getInput() {
         return this.input;
+    }
+
+    private void update() {
+        this.setContentPane(currentContent);
+        this.revalidate();
+        this.repaint();
     }
 }

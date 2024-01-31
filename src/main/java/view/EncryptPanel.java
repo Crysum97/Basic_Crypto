@@ -23,6 +23,7 @@ public class EncryptPanel {
         methodComboBox.addItemListener(controller::onItemChanged);
         encryptButton.addActionListener(e -> controller.onEncrypt());
         saveToFileButton.addActionListener(e -> controller.onSaveFile());
+        nextButton.addActionListener(e -> parent.callInjectPanel());
     }
 
     public JPanel getRoot() {
