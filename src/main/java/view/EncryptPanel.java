@@ -1,13 +1,8 @@
 package view;
 
 import controller.EncryptPanelController;
-import iterative.Matrix;
-import iterative.Vigerene;
-
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Objects;
+
 
 public class EncryptPanel {
     private JButton backButton;
@@ -22,32 +17,11 @@ public class EncryptPanel {
     private final EncryptPanelController controller;
 
     public EncryptPanel(ApplicationFrame parent) {
-        this.controller = new EncryptPanelController(this);
+        this.controller = new EncryptPanelController(this, parent);
         backButton.addActionListener(e -> parent.popLastPanel());
         openButton.addActionListener(e -> controller.onOpenFile());
-        encryptButton.addActionListener(e -> {
-            String input = parent.input.getContentContainer().getText();
-            String keyField = keyTextField.getText();
-            switch (Objects.requireNonNull(methodComboBox.getSelectedItem()).toString()) {
-                case "Caesar 1" -> {
-                    try {
-                        controller.encryptCaesar(new functional.Caesar(), input, Integer.parseInt(keyField));
-                    } catch (NumberFormatException ignore) {
-                        controller.handleInvalidInput(keyField);
-                    }
-                }
-                case "Caesar 2" -> {
-                    try {
-                        controller.encryptCaesar(new iterative.Caesar(), input, Integer.parseInt(keyField));
-                    } catch (NumberFormatException ignore) {
-                        controller.handleInvalidInput(keyField);
-                    }
-                }
-                case "Matrix" -> controller.encryptMatrix(new Matrix(), input);
-                case "Vigerene" -> controller.encryptVigerene(new Vigerene(), input, keyField);
-                default -> System.out.println("Shouldn't be here...");
-            }
-        });
+        methodComboBox.addItemListener(controller::onItemChanged);
+        encryptButton.addActionListener(e -> controller.onEncrypt());
         saveToFileButton.addActionListener(e -> controller.onSaveFile());
     }
 
@@ -59,7 +33,15 @@ public class EncryptPanel {
         return this.keyTextField;
     }
 
+    public JComboBox<String> getMethodComboBox() {
+        return this.methodComboBox;
+    }
+
     public JTextArea getPreviewTextArea() {
         return this.previewTextArea;
+    }
+
+    public JButton getOpenButton() {
+        return this.openButton;
     }
 }

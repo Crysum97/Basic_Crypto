@@ -9,8 +9,8 @@ import java.util.Stack;
 public class ApplicationFrame extends JFrame {
     /** Reference to the content of the frame */
     JPanel currentContent;
-    InputPanel input = new InputPanel(this);
-    EncryptPanel encrypt = new EncryptPanel(this);
+    private final InputPanel input = new InputPanel(this);
+    private final EncryptPanel encrypt = new EncryptPanel(this);
     Stack<JPanel> visited = new Stack<>();
 
     /**
@@ -42,5 +42,9 @@ public class ApplicationFrame extends JFrame {
         this.setContentPane(currentContent);
         this.revalidate();
         this.repaint();
+    }
+
+    public InputPanel getInput() {
+        return this.input;
     }
 }
