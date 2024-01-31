@@ -33,35 +33,45 @@ public class EncryptPanelController extends FileController {
     }
 
     public void encryptCaesar(CryptoEngine engine,String input, int key) {
+        logger.info("Started encryption using Caesar");
         try {
             String encrypted = engine.encrypt(input, key);
+            logger.info("Encryption using Caesar is done");
             view.getPreviewTextArea().setText(breakIntoLines(encrypted));
         } catch (CryptoException e) {
+            logger.error("Encryption using Caesar failed!");
             e.printStackTrace();
         }
     }
 
     public void encryptMatrix(CryptoEngine engine, String input) {
+        logger.info("Started encryption using Matrix encryption");
         try {
             String encrypted = engine.encrypt(input);
+            logger.info("Encryption using Matrix encryption is done");
             view.getPreviewTextArea().setText(breakIntoLines(encrypted));
         } catch (CryptoException e) {
+            logger.error("Encyption using Matrix encryption failed!");
             e.printStackTrace();
         }
     }
 
     public void encryptVigerene(CryptoEngine engine, String input, String key) {
+        logger.info("Started encryption using Vigerene");
         try {
             File keyFile = new File(key);
             if (keyFile.exists()) {
                 String encrypted = engine.encrypt(input, transformString(readFromFile(new File(key))));
+                logger.info("Encryption using Vigerene is done");
                 view.getPreviewTextArea().setText(breakIntoLines(encrypted));
             } else {
                 throw new NoSuchFileException("This file does not exists!");
             }
         } catch (CryptoException e) {
+            logger.error("Encryption using Vigerene failed!");
             e.printStackTrace();
         } catch (NoSuchFileException ignore) {
+            logger.error("Encryption using Vigerene failed!");
             JOptionPane.showMessageDialog(null, "This file does not exist!","Error", JOptionPane.ERROR_MESSAGE);
             view.getKeyPathTextField().setText("");
         }
@@ -93,7 +103,7 @@ public class EncryptPanelController extends FileController {
 
     public void handleInvalidInput(String invalid) {
         logger.error(String.format("Found invalid input %s", invalid));
-        JOptionPane.showMessageDialog(null, "Please provide a valid encryption key!",
+        JOptionPane.showMessageDialog(null, "Please provide a numeric encryption key!",
                 "Error", JOptionPane.ERROR_MESSAGE);
     }
 
@@ -105,16 +115,19 @@ public class EncryptPanelController extends FileController {
         if (e.getStateChange() == ItemEvent.SELECTED) {
             switch (e.getItem().toString()) {
                 case "Matrix" -> {
+                    logger.debug(String.format("Selected encryption Method: %s", e.getItem()));
                     view.getKeyPathTextField().setEnabled(false);
                     view.getKeyPathTextField().setEditable(false);
                     view.getOpenButton().setEnabled(false);
                 }
                 case "Vigerene" -> {
+                    logger.debug(String.format("Selected encryption Method: %s", e.getItem()));
                     view.getKeyPathTextField().setEnabled(true);
                     view.getKeyPathTextField().setEditable(false);
                     view.getOpenButton().setEnabled(true);
                 }
                 default -> {
+                    logger.debug(String.format("Selected encryption Method: %s", e.getItem()));
                     view.getKeyPathTextField().setEnabled(true);
                     view.getKeyPathTextField().setEditable(true);
                     view.getOpenButton().setEnabled(false);

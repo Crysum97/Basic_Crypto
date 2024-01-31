@@ -41,6 +41,7 @@ public class InputPanelController extends FileController {
     }
 
     public void onNext(ApplicationFrame parent) {
+        logger.debug("Switching to Encryption Panel...");
         parent.callEncryptionPanel();
     }
 }
