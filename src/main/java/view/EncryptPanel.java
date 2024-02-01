@@ -45,4 +45,8 @@ public class EncryptPanel {
     public JButton getOpenButton() {
         return this.openButton;
     }
+
+    public JButton getNextButton() {
+        return this.nextButton;
+    }
 }

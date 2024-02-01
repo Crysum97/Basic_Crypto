@@ -98,7 +98,9 @@ public class EncryptPanelController extends FileController {
             case "Matrix" -> encryptMatrix(new Matrix(), input);
             case "Vigerene" -> encryptVigerene(new Vigerene(), input, keyField);
             default -> System.out.println("Shouldn't be here...");
+
         }
+        view.getNextButton().setEnabled(!view.getPreviewTextArea().getText().isEmpty());
     }
 
     public void handleInvalidInput(String invalid) {
