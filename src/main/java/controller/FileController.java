@@ -2,7 +2,6 @@ package controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
@@ -18,13 +17,22 @@ public class FileController {
      */
     protected Optional<File> openFile() {
         // construct FileChooser
-        JFileChooser chooser = getTextFileChooser();
+        JFileChooser chooser = getTextFileChooser(new FileNameExtensionFilter("text file","txt"));
         // show open dialog
         logger.info("Showing open dialog");
         chooser.showOpenDialog(null);
         logger.info("Open dialog closed");
 
         // return file as Optional since the value might be null if the user did not select a valid file
+        return Optional.ofNullable(chooser.getSelectedFile());
+    }
+
+    protected Optional<File> openImage() {
+        JFileChooser chooser = getTextFileChooser(new FileNameExtensionFilter("Bitmap Image", "bmp"));
+        logger.info("Showing open dialog");
+        chooser.showOpenDialog(null);
+        logger.info("Open dialog closed");
+
         return Optional.ofNullable(chooser.getSelectedFile());
     }
 
@@ -53,7 +61,7 @@ public class FileController {
      * @return {@link Optional} of the selected {@link File}
      */
     protected Optional<File> saveTextFile() {
-        JFileChooser chooser = getTextFileChooser();
+        JFileChooser chooser = getTextFileChooser(new FileNameExtensionFilter("text file", "txt"));
 
         logger.info("Showing save dialog");
         chooser.showSaveDialog(null);
@@ -89,11 +97,10 @@ public class FileController {
      * Generates a {@link JFileChooser} that lets the user select a single text file
      * @return {@link JFileChooser} that only accepts a single text files
      */
-    private JFileChooser getTextFileChooser() {
+    private JFileChooser getTextFileChooser(FileNameExtensionFilter filter) {
         JFileChooser chooser = new JFileChooser();
         chooser.setMultiSelectionEnabled(false);
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("text file", "txt");
         chooser.setFileFilter(filter);
         return chooser;
     }

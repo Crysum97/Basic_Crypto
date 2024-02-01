@@ -139,5 +139,4 @@ public class EncryptPanelController extends FileController {
             view.getPreviewTextArea().setText("");
         }
     }
-
 }
