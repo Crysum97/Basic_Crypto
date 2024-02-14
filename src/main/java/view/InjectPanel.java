@@ -3,10 +3,6 @@ package view;
 import controller.InjectPanelController;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 
 public class InjectPanel {
     private final ApplicationFrame parent;
