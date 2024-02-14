@@ -27,6 +27,10 @@ public class FileController {
         return Optional.ofNullable(chooser.getSelectedFile());
     }
 
+    /**
+     * Opens a dialog to choose a bitmap image
+     * @return {@link Optional} of the selected {@link File}
+     */
     protected Optional<File> openImage() {
         JFileChooser chooser = getTextFileChooser(new FileNameExtensionFilter("Bitmap Image", "bmp"));
         logger.info("Showing open dialog");

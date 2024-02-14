@@ -19,19 +19,36 @@ import static util.Tools.breakIntoLines;
 import static util.Tools.transformString;
 
 public class EncryptPanelController extends FileController {
+    /** reference to logger instance */
     private static final Logger logger = LogManager.getLogger("EncryptPanel");
+    /** reference to view */
     private final EncryptPanel view;
+    /** reference to frame */
     private final ApplicationFrame parent;
 
+    /**
+     * default constructor
+     * @param view reference to {@link EncryptPanel} view
+     * @param parent reference to the {@link ApplicationFrame} frame
+     */
     public EncryptPanelController(EncryptPanel view, ApplicationFrame parent) {
         this.view = view;
         this.parent = parent;
     }
 
+    /**
+     * Behavior for clicking on the open button
+     */
     public void onOpenFile() {
         openFile().ifPresent(file -> view.getKeyPathTextField().setText(file.getAbsolutePath()));
     }
 
+    /**
+     * Encrypts a given {@link String} using caesar encryption
+     * @param engine used {@link CryptoEngine}
+     * @param input {@link String} to encrypt
+     * @param key key to use for encryption
+     */
     public void encryptCaesar(CryptoEngine engine,String input, int key) {
         logger.info("Started encryption using Caesar");
         try {
@@ -44,6 +61,11 @@ public class EncryptPanelController extends FileController {
         }
     }
 
+    /**
+     * Encrypts a given {@link String}using matrix encryption
+     * @param engine used {@link CryptoEngine}
+     * @param input {@link String} to encrypt
+     */
     public void encryptMatrix(CryptoEngine engine, String input) {
         logger.info("Started encryption using Matrix encryption");
         try {
@@ -56,6 +78,12 @@ public class EncryptPanelController extends FileController {
         }
     }
 
+    /**
+     * Encrypts a given {@link String} using vigerene encryption
+     * @param engine used {@link CryptoEngine}
+     * @param input {@link String} to encrypt
+     * @param key used {@link String} key
+     */
     public void encryptVigerene(CryptoEngine engine, String input, String key) {
         logger.info("Started encryption using Vigerene");
         try {
@@ -77,6 +105,9 @@ public class EncryptPanelController extends FileController {
         }
     }
 
+    /**
+     * Behavior when clicking on the encrypt button
+     */
     public void onEncrypt() {
         String input = parent.getInput().getContentContainer().getText();
         String keyField = view.getKeyPathTextField().getText();
@@ -103,16 +134,27 @@ public class EncryptPanelController extends FileController {
         view.getNextButton().setEnabled(!view.getPreviewTextArea().getText().isEmpty());
     }
 
+    /**
+     * Shows a dialog to the user if invalid input is provided
+     * @param invalid {@link String} input that provoked the call
+     */
     public void handleInvalidInput(String invalid) {
         logger.error(String.format("Found invalid input %s", invalid));
         JOptionPane.showMessageDialog(null, "Please provide a numeric encryption key!",
                 "Error", JOptionPane.ERROR_MESSAGE);
     }
 
+    /**
+     * Behavior when the save button is clicked
+     */
     public void onSaveFile() {
         saveTextFile().ifPresent(file -> writeToFile(file, transformString(view.getPreviewTextArea().getText())));
     }
 
+    /**
+     * Updated the view whenever the selected encryption method is changed
+     * @param e current {@link ItemEvent} that provoked the call
+     */
     public void onItemChanged(ItemEvent e) {
         if (e.getStateChange() == ItemEvent.SELECTED) {
             switch (e.getItem().toString()) {

@@ -40,6 +40,10 @@ public class InputPanelController extends FileController {
                                                                 : view.getPathTextField().getText()));
     }
 
+    /**
+     * Behavior when clicking on the next button
+     * @param parent reference to the {@link ApplicationFrame} frame
+     */
     public void onNext(ApplicationFrame parent) {
         logger.debug("Switching to Encryption Panel...");
         parent.callEncryptionPanel();

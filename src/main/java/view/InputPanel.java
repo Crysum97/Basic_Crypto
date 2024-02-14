@@ -23,6 +23,7 @@ public class InputPanel {
      * reference to the text area which yields the file content
      */
     private JTextArea fileContent;
+    /** reference to the next button */
     private JButton nextButton;
     /**
      * reference to this classes controller
@@ -67,6 +68,10 @@ public class InputPanel {
         return this.fileContent;
     }
 
+    /**
+     * Getter for the next button
+     * @return reference to the next {@link JButton}
+     */
     public JButton getNextButton() {
         return this.nextButton;
     }
