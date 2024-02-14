@@ -29,7 +29,7 @@ public class ApplicationFrame extends JFrame {
     }
 
     /**
-     *
+     * Calls the encryption panel
      */
     public void callEncryptionPanel() {
         visited.push(currentContent);
@@ -37,24 +37,43 @@ public class ApplicationFrame extends JFrame {
         update();
     }
 
+    /**
+     * Calls the injection panel
+     */
     public void callInjectPanel() {
         visited.push(currentContent);
         currentContent = inject.getRoot();
         update();
     }
 
+    /**
+     * Reopens the last panel
+     */
     public void popLastPanel() {
         currentContent = visited.pop();
         update();
     }
 
+    /**
+     * Getter for the input panel
+     * @return reference to the {@link InputPanel}
+     */
     public InputPanel getInput() {
         return this.input;
     }
 
+    /**
+     * Updates the GUI
+     */
     private void update() {
         this.setContentPane(currentContent);
         this.revalidate();
         this.repaint();
+
+        SwingUtilities.invokeLater(() -> {
+            if (currentContent.equals(inject.getRoot())) {
+                inject.redraw();
+            }
+        });
     }
 }

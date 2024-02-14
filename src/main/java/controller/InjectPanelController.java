@@ -26,13 +26,13 @@ public class InjectPanelController extends FileController {
     }
 
     public void readImage(String filePath) {
-        try {
-            BufferedImage image = ImageIO.read(new File(filePath));
-            JPanel imgPanel = view.getImagePanel();
+            try {
+                BufferedImage image = ImageIO.read(new File(filePath));
+                JPanel imgPanel = view.getImagePanel();
 //            imgPanel.getGraphics().clearRect(0, 0, imgPanel.getWidth(), imgPanel.getHeight());
-            imgPanel.getGraphics().drawImage(image, 0, 0, imgPanel.getWidth(), imgPanel.getHeight(), null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                imgPanel.getGraphics().drawImage(image, 0, 0, imgPanel.getWidth(), imgPanel.getHeight(), null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
     }
 }

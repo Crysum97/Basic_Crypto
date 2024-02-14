@@ -38,6 +38,8 @@ public class InjectPanel {
     }
 
     public void redraw() {
-        controller.readImage(inputPathField.getText());
+        if (!inputPathField.getText().isEmpty()) {
+            controller.readImage(inputPathField.getText());
+        }
     }
 }
